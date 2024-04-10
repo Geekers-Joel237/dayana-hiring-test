@@ -16,7 +16,7 @@ public class PersonVerificationService {
         var scoreResult = new PersonVerificationResult();
         scoreResult.nameScore = this.buildScoreFrom(verificationCriteria.getName(), existingPerson.getName().value());
         scoreResult.surnameScore = this.buildScoreFrom(verificationCriteria.getSurname(), existingPerson.getSurname().value());
-        //scoreResult.birthDateScore = this.buildScoreFrom(new verificationCriteria.getDate(), existingPerson.getBirthDate().toString());
+        scoreResult.birthDateScore = this.buildScoreFrom(verificationCriteria.getDate(), existingPerson.getBirthDate().toString());
         return scoreResult;
     }
 
