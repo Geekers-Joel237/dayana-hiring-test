@@ -2,6 +2,7 @@ package com.example.dayanahiringtest.identity.person.application.usecases.create
 
 import an.awesome.pipelinr.Command;
 import com.example.dayanahiringtest.identity.person.application.ports.PersonRepository;
+import com.example.dayanahiringtest.identity.person.domain.exceptions.AlreadyExistNiuException;
 import com.example.dayanahiringtest.identity.person.domain.model.Person;
 import com.example.dayanahiringtest.identity.person.domain.viewmodel.IdResponse;
 import com.example.dayanahiringtest.identity.person.domain.vo.NameVo;
@@ -23,11 +24,21 @@ public class CreatePersonCommandHandler implements Command.Handler<CreatePersonC
         NameVo surname = new NameVo(command.surname());
         LocalDate date = LocalDate.parse(command.birthDate());
 
+        this.checkIfNiuAlreadyExistOrThrowAlreadyExistNiuException(niu);
+
         var person = Person.create(
                 niu, name, surname, date
         );
         personRepository.save(person);
 
         return new IdResponse(person.getId());
+    }
+
+    private void checkIfNiuAlreadyExistOrThrowAlreadyExistNiuException(NiuVo niu) {
+        var existingPerson = this.personRepository.findByNiu(niu);
+        if (existingPerson.isEmpty()) {
+            return;
+        }
+        throw new AlreadyExistNiuException("This NIU already exists!");
     }
 }
