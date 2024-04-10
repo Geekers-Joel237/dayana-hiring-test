@@ -1,4 +1,4 @@
-package com.example.dayanahiringtest.identity;
+package com.example.dayanahiringtest.identity.verification;
 
 import com.example.dayanahiringtest.identity.person.domain.model.Person;
 import com.example.dayanahiringtest.identity.person.domain.vo.NameVo;
