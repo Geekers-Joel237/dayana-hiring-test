@@ -8,10 +8,12 @@ import com.example.dayanahiringtest.identity.person.infrastructure.spring.http.r
 import com.example.dayanahiringtest.identity.person.infrastructure.spring.factories.CreatePersonFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/persons")
+@Transactional
 public class PersonController {
     private final Pipeline pipeline;
 

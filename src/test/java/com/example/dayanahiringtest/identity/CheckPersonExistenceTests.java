@@ -37,9 +37,9 @@ public class CheckPersonExistenceTests {
         var command = new CheckPersonExistenceCommand(
                 existingPerson1.getNiu().value()
         );
-        command.setName("Jonas");
+        //command.setName("Jonas");
         command.setSurname("Doe");
-        command.setBirthDate("1998-05-05");
+        //command.setBirthDate("1998-05-05");
 
         var result = useCase.handle(command);
 
