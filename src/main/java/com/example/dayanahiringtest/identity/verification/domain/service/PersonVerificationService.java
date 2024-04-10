@@ -3,6 +3,7 @@ package com.example.dayanahiringtest.identity.verification.domain.service;
 import com.example.dayanahiringtest.identity.person.domain.model.Person;
 import com.example.dayanahiringtest.identity.verification.domain.viewmodel.PersonVerificationResult;
 import com.example.dayanahiringtest.identity.verification.domain.vo.VerificationCriteria;
+import org.junit.platform.commons.util.StringUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,7 +16,8 @@ public class PersonVerificationService {
         return scoreResult;
     }
 
-    private double buildScoreFrom(String value, String value1) {
+    private double buildScoreFrom(String valueFromCriteria, String valueFromExistingPerson) {
+        return  StringUtils.getJaroWinklerDistance(valueFromCriteria, valueFromExistingPerson);
     }
 
 
