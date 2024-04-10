@@ -1,14 +1,14 @@
 package com.example.dayanahiringtest.identity.person.domain.model;
 
+import com.example.dayanahiringtest.core.domain.model.BaseEntity;
 import com.example.dayanahiringtest.identity.person.domain.vo.NameVo;
 import com.example.dayanahiringtest.identity.person.domain.vo.NiuVo;
 import java.time.LocalDate;
 import java.util.UUID;
 
 
-public class Person {
+public class Person extends BaseEntity {
 
-    private String id;
     private NiuVo niu;
     private NameVo name;
     private NameVo surname;
@@ -31,9 +31,6 @@ public class Person {
         this.birthDate = birthDate;
     }
 
-    public String getId() {
-        return id;
-    }
 
     public NiuVo getNiu() {
         return niu;
