@@ -1,4 +1,4 @@
-package com.example.dayanahiringtest.identity.person.infrastructure.spring;
+package com.example.dayanahiringtest.identity.person.infrastructure.spring.http.request;
 
 public class CreatePersonDto {
     private String niu;

@@ -1,8 +1,9 @@
-package com.example.dayanahiringtest.identity.person.infrastructure.spring;
+package com.example.dayanahiringtest.identity.person.infrastructure.spring.config;
 
 import com.example.dayanahiringtest.identity.person.application.ports.PersonRepository;
 import com.example.dayanahiringtest.identity.person.infrastructure.persistence.jpa.SQLPersonDataAccessor;
 import com.example.dayanahiringtest.identity.person.infrastructure.persistence.jpa.SQLPersonRepository;
+import com.example.dayanahiringtest.identity.person.infrastructure.spring.PersonDataMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

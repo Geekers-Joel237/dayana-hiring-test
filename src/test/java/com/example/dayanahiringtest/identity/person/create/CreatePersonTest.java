@@ -1,4 +1,4 @@
-package com.example.dayanahiringtest.identity.person;
+package com.example.dayanahiringtest.identity.person.create;
 
 import com.example.dayanahiringtest.identity.person.application.usecases.create.CreatePersonCommand;
 import com.example.dayanahiringtest.identity.person.application.usecases.create.CreatePersonCommandHandler;

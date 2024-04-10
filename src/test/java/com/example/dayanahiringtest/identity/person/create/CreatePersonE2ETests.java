@@ -1,4 +1,4 @@
-package com.example.dayanahiringtest.identity.person;
+package com.example.dayanahiringtest.identity.person.create;
 
 import com.example.dayanahiringtest.PostgreSqlTestConfiguration;
 import com.example.dayanahiringtest.identity.person.application.ports.PersonRepository;
@@ -6,9 +6,8 @@ import com.example.dayanahiringtest.identity.person.domain.model.Person;
 import com.example.dayanahiringtest.identity.person.domain.viewmodel.IdResponse;
 import com.example.dayanahiringtest.identity.person.domain.vo.NameVo;
 import com.example.dayanahiringtest.identity.person.domain.vo.NiuVo;
-import com.example.dayanahiringtest.identity.person.infrastructure.spring.CreatePersonDto;
+import com.example.dayanahiringtest.identity.person.infrastructure.spring.http.request.CreatePersonDto;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

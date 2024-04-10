@@ -5,6 +5,7 @@ import com.example.dayanahiringtest.identity.person.domain.model.Person;
 import com.example.dayanahiringtest.identity.person.domain.vo.NiuVo;
 import com.example.dayanahiringtest.identity.person.infrastructure.spring.PersonDataMapper;
 
+import java.util.List;
 import java.util.Optional;
 
 public class SQLPersonRepository implements PersonRepository {
@@ -32,5 +33,10 @@ public class SQLPersonRepository implements PersonRepository {
     public Optional<Person> findByNiu(NiuVo niu) {
         var sqlQuery = dataAccessor.findByNiu(niu.value());
         return sqlQuery.map(dataMapper::toDomain);
+    }
+
+    @Override
+    public List<Person> findAll() {
+        return dataAccessor.findAll().stream().map(dataMapper::toDomain).toList();
     }
 }

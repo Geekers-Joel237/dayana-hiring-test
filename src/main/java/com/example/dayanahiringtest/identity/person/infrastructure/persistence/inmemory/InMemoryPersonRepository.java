@@ -5,6 +5,7 @@ import com.example.dayanahiringtest.identity.person.domain.model.Person;
 import com.example.dayanahiringtest.identity.person.domain.vo.NiuVo;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -26,5 +27,10 @@ public class InMemoryPersonRepository implements PersonRepository {
         return persons.values().stream()
                 .filter(person -> person.getNiu().value().equals(niu.value()))
                 .findFirst();
+    }
+
+    @Override
+    public List<Person> findAll() {
+        return persons.values().stream().toList();
     }
 }

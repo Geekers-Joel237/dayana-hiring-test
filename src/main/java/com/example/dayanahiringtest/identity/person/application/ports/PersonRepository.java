@@ -3,6 +3,7 @@ package com.example.dayanahiringtest.identity.person.application.ports;
 import com.example.dayanahiringtest.identity.person.domain.model.Person;
 import com.example.dayanahiringtest.identity.person.domain.vo.NiuVo;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface PersonRepository {
@@ -11,4 +12,6 @@ public interface PersonRepository {
     void save(Person person);
 
     Optional<Person> findByNiu(NiuVo niu);
+
+    List<Person> findAll();
 }
