@@ -12,8 +12,8 @@ import java.time.LocalDate;
 public class CreatePersonCommandHandler implements Command.Handler<CreatePersonCommand, IdResponse> {
     private final PersonRepository personRepository;
 
-    public CreatePersonCommandHandler(PersonRepository personRepository) {
-        this.personRepository = personRepository;
+    public CreatePersonCommandHandler(PersonRepository repository) {
+        this.personRepository = repository;
     }
 
     @Override
@@ -27,6 +27,7 @@ public class CreatePersonCommandHandler implements Command.Handler<CreatePersonC
                 niu, name, surname, date
         );
         personRepository.save(person);
+
         return new IdResponse(person.getId());
     }
 }

@@ -17,8 +17,8 @@ public class CreatePersonTest {
         var useCase = new CreatePersonCommandHandler(repository);
         var command = new CreatePersonCommand(
                 "P059116609705Y",
-                "Ivan",
-                "Joel",
+                "John",
+                "Doe",
                 "1998-05-05"
         );
 

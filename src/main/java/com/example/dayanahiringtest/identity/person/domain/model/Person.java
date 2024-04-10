@@ -2,11 +2,12 @@ package com.example.dayanahiringtest.identity.person.domain.model;
 
 import com.example.dayanahiringtest.identity.person.domain.vo.NameVo;
 import com.example.dayanahiringtest.identity.person.domain.vo.NiuVo;
-
 import java.time.LocalDate;
 import java.util.UUID;
 
+
 public class Person {
+
     private String id;
     private NiuVo niu;
     private NameVo name;

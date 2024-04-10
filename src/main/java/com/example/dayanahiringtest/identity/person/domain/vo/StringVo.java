@@ -12,7 +12,7 @@ public class StringVo {
 
     protected static void validate(String value) {
         if (value.isEmpty()) {
-            throw new NotNullException("Cette chaîne de caractères ne peut être vide !");
+            throw new NotNullException("This character string cannot be empty!");
         }
     }
 

@@ -3,7 +3,7 @@ package com.example.dayanahiringtest.identity.person.domain.vo;
 import com.example.dayanahiringtest.core.domain.exceptions.InvalidArgumentException;
 
 /**
- * NIU valides
+ * NIU valid
  * 14 characters, start with P or M
  * P059116609705Y
  * M072017804390K
