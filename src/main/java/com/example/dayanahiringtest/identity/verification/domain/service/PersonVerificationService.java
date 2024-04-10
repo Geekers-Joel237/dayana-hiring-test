@@ -3,7 +3,7 @@ package com.example.dayanahiringtest.identity.verification.domain.service;
 import com.example.dayanahiringtest.identity.person.domain.model.Person;
 import com.example.dayanahiringtest.identity.verification.domain.viewmodel.PersonVerificationResult;
 import com.example.dayanahiringtest.identity.verification.domain.vo.VerificationCriteria;
-import org.junit.platform.commons.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 @Service

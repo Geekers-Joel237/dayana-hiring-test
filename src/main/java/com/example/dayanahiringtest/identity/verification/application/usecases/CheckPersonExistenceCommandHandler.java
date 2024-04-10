@@ -31,9 +31,8 @@ public class CheckPersonExistenceCommandHandler implements Command.Handler<Check
 
         var existingPerson = this.getPersonOrThrowNotFoundException(niu);
         var verificationCriteria = VerificationCriteria.create(niu,name,surname,date);
-        var scoreResult = this.personVerificationService.verify(existingPerson, verificationCriteria);
 
-        return null;
+        return this.personVerificationService.verify(existingPerson, verificationCriteria);
     }
 
     private Person getPersonOrThrowNotFoundException(NiuVo niu) {
