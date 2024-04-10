@@ -25,7 +25,7 @@ public class GetAllPersonsCommandHandler implements Command.Handler<GetAllPerson
                 p.getNiu().value(),
                 p.getName().value(),
                 p.getSurname().value(),
-                p.getBirthDate()
+                p.getBirthDate().toString()
         );
     }
 }

@@ -7,12 +7,13 @@ public class PersonViewModel {
     private String niu;
     private String name;
     private String surname;
-    private LocalDate birthDate;
+
+    private String birthDate;
 
     public PersonViewModel() {
     }
 
-    public PersonViewModel(String id, String niu, String name, String surname, LocalDate birthDate) {
+    public PersonViewModel(String id, String niu, String name, String surname, String birthDate) {
         this.id = id;
         this.niu = niu;
         this.name = name;
@@ -36,4 +37,7 @@ public class PersonViewModel {
         return surname;
     }
 
+    public String getBirthDate() {
+        return birthDate;
+    }
 }
